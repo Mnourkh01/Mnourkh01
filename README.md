@@ -1,61 +1,94 @@
 <h1 align="center">Hi, I'm Mohammad Nour 👋</h1>
 
 <p align="center">
-  Backend Engineer | Java & Kotlin | Spring Boot | Ktor | REST APIs | JWT Security | PostgreSQL
+  Backend Developer | Kotlin & Java | Spring Boot | Ktor | REST APIs | JWT Security | PostgreSQL
 </p>
 
 <p align="center">
-  📧 <a href="mailto:YOUR_EMAIL_HERE">Email</a> •
-  🐙 <a href="https://github.com/YOUR_GITHUB_USERNAME">GitHub</a> •
-  🔗 <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/">LinkedIn</a>
+  📧 <a href="mailto:m.nourkh01@gmail.com">m.nourkh01@gmail.com</a> •
+  🐙 <a href="https://github.com/Mnourkh01">GitHub</a>
 </p>
 
 ---
 
 ## 🚀 About Me
-I’m a Backend Developer specializing in **Java and Kotlin**, with hands-on experience building secure and scalable backend systems using **Spring Boot** and **Ktor**.
+I’m a Backend Developer currently training at **Followise**, with hands-on experience building backend systems using **Kotlin/Java** with **Spring Boot** and **Ktor**.
 
-I focus on designing clean and maintainable **REST APIs**, implementing **JWT authentication & authorization**, and working with relational databases like **PostgreSQL/MySQL** using **JPA + Hibernate**.
+I focus on building secure and scalable **REST APIs**, implementing **JWT authentication (Access + Refresh)**, and delivering clean backend solutions with strong attention to **validation, pagination, filtering, sorting, and error handling**.
 
-I care about **backend security**, clean architecture, performance, and building reliable systems that work well in real-world production environments.
+I also have experience building a frontend prototype using **Firebase Studio** (API integration), and I contributed to website development and QA using **WordPress + Elementor**.
 
 ---
 
 ## 🛠️ Core Technical Skills
-- **Languages:** Java, Kotlin  
-- **Frameworks:** Spring Boot, Spring Security, Spring Data JPA, Hibernate, Ktor  
-- **API Design:** REST APIs, Validation, Pagination, Error Handling  
-- **Security:** JWT, Role-Based Access Control (RBAC)  
-- **Databases:** PostgreSQL, MySQL  
-- **DevOps:** Git, GitHub, GitHub Actions (Basics), Linux VPS (SSH)  
-- **Tools:** IntelliJ IDEA, Postman / Bruno  
-- **Testing:** JUnit (Basics)
+- **Languages:** Kotlin, Java  
+- **Frameworks:** Spring Boot, Spring Security, Ktor  
+- **Backend:** REST APIs, JWT (Access + Refresh), RBAC, Validation, Error Handling  
+- **Database:** PostgreSQL, Exposed ORM, Flyway Migrations  
+- **Tools:** IntelliJ IDEA, Git & GitHub, Postman / Bruno, Gradle  
+- **DevOps (Basics):** Docker / Docker Compose, GitHub Actions  
+- **Frontend Prototype:** Firebase Studio (API Integration)  
+- **Web / QA:** WordPress, Elementor, Responsive UI QA  
 
 ---
 
 ## 🌟 Selected Projects
+
 ### ✅ Smart Review Funnel (SRF)
-Backend-driven review management platform with secure APIs, role-based access, and production-ready architecture.
+A backend-driven review management platform with secure APIs and real-world production-style architecture.
 
-### ✅ Spring Boot Starter Template
-A reusable backend starter with JWT security, clean structure, and stable configuration for real projects.
+**Highlights:**
+- Feature-based modules (Users, Places, Reviews, Notifications)
+- JWT authentication + role-based access (Admin / Owner / Public)
+- Consistent pagination + filtering + validation utilities
+- Improved architecture in SRF v2 (Spring Boot layered structure)
 
-### ✅ Talent Broker Platform (Job Board)
-Backend APIs for job listings, filters, and user roles (Developer/Designer focused platform).
+---
+
+### ✅ Spring Boot API Starter (Reusable Backend Foundation)
+A production-ready starter template built to reuse across backend projects.
+
+**Highlights:**
+- JWT auth flow (Register / Login / Refresh / Logout)
+- Spring Security + BCrypt + RBAC
+- Unified pagination contract (items / totalItems / totalPages)
+- Global error handling with consistent response format
+- Flyway migrations + environment profiles + secure config
+- Clean layered architecture (Controller / Service / Repository)
+
+---
+
+### ✅ Firebase Studio Frontend Prototype
+Frontend prototype connected to backend APIs to simulate real product flows.
+
+**Highlights:**
+- Authentication flow + role-based routing
+- Owner dashboard UI (metrics/charts)
+- Notifications listing with pagination
+- Profile management (GET / PATCH)
+
+---
+
+### ✅ BuildNova Construction Website (WordPress + Elementor)
+Built and QA-tested responsive pages with structured tracking and retesting.
+
+**Highlights:**
+- Responsive layout fixes + custom CSS improvements
+- UI QA across desktop/tablet/mobile
+- Issue reporting with severity + expected fix tracking
 
 ---
 
 ## 🎯 Current Focus
 - Advanced Spring Security + JWT
-- Microservices architecture fundamentals
-- Better testing practices (JUnit + integration tests)
-- Improving CI/CD workflows with GitHub Actions
+- Microservices fundamentals
+- Better testing practices (JUnit + integration testing)
+- Improving CI/CD workflows (GitHub Actions)
 
 ---
 
 ## 🤝 Let’s Connect
-I’m always open to discussing backend engineering, Spring Boot, and real-world backend challenges.
+If you want to collaborate or discuss backend engineering and real-world API design:
 
-📧 <a href="mailto:YOUR_EMAIL_HERE">Email</a> •
-🐙 <a href="https://github.com/YOUR_GITHUB_USERNAME">GitHub</a> •
-🔗 <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/">LinkedIn</a>
+📧 <a href="mailto:m.nourkh01@gmail.com">m.nourkh01@gmail.com</a>  
+🐙 <a href="https://github.com/Mnourkh01">github.com/Mnourkh01</a>

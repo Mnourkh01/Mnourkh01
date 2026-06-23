@@ -133,26 +133,14 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
 
 ---
 
-## 📊 GitHub Stats
-
-<!--
-  Most of my work lives in private repos, so the PUBLIC github-readme-stats
-  instance below shows almost nothing. To count private contributions,
-  self-host github-readme-stats with a personal access token and replace
-  "github-readme-stats.vercel.app" with your own deployment URL.
--->
+## 📊 GitHub Activity
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Mnourkh01&show_icons=true&hide_border=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mnourkh01&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" alt="top langs" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mnourkh01&hide_border=true&theme=tokyonight" alt="contribution streak" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mnourkh01&hide_border=true&theme=tokyonight" alt="streak" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mnourkh01&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Graph" alt="activity graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mnourkh01&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Graph" alt="contribution activity graph" />
 </p>
 
 ---

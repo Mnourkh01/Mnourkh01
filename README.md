@@ -6,7 +6,7 @@
 <!-- Typing subtitle -->
 <p align="center">
   <a href="https://github.com/Mnourkh01">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6DB33F&center=true&vCenter=true&width=640&lines=Backend-focused+Full-Stack+Developer;Kotlin+%7C+Java+%7C+TypeScript+%7C+PHP;Spring+Boot+%7C+Ktor+%7C+NestJS+%7C+Next.js+%7C+Laravel;Clean+architecture+%2B+secure%2C+production-ready+APIs" alt="typing" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6DB33F&center=true&vCenter=true&width=640&lines=Backend-focused+Full-Stack+Developer;Building+foloengine+v3%2C+a+multi-tenant+commerce+engine;Kotlin+%7C+Java+%7C+TypeScript+%7C+PHP;Spring+Boot+%7C+Ktor+%7C+NestJS+%7C+Next.js+%7C+Laravel;Clean+architecture+%2B+secure%2C+production-ready+APIs" alt="typing" />
   </a>
 </p>
 
@@ -34,7 +34,7 @@ val mohammad = Developer(
 )
 ```
 
-I started on the backend (Kotlin, Java, Spring Boot) and grew outward into TypeScript and PHP across real production work at **Folowise**: commerce platforms, a QR product, CMS starters, and storefronts. I care about clean architecture, boundary validation, consistent error envelopes, and APIs that behave predictably under load. Roughly a year in, and shipping for real.
+I started on the backend (Kotlin, Java, Spring Boot) and grew outward into TypeScript and PHP across real production work at **Folowise**. My strongest build is a **multi-tenant commerce engine** (foloengine v3) that powers live storefronts, plus a QR product, CMS starters, and storefronts around it. I care about clean architecture, boundary validation, consistent error envelopes, and APIs that behave predictably under load. Roughly a year in, and shipping for real.
 
 ---
 
@@ -82,11 +82,28 @@ I started on the backend (Kotlin, Java, Spring Boot) and grew outward into TypeS
 
 ---
 
-## 🚀 What I've Worked On
+## ⭐ Featured: Folowise Commerce Engine (foloengine v3)
+
+> My strongest project. A multi-tenant commerce **engine**, not just a store.
+
+The engine is the shared brain and control plane for a fleet of storefronts. It owns **licensing, billing, capability authority, update policy, and operational visibility**, while each website owns its own runtime commerce data (DB-per-tenant isolation, no cross-tenant leakage). It ships a **server-side PHP SDK** plus a scoped browser JS client, Stripe-hosted checkout, and 30+ commerce HTTP endpoints. ADR-driven architecture, deployed through GitHub Actions CI, observed with Sentry, and already powering live production storefronts (FoloPrint among them).
+
+<p>
+  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel" />
+  <img src="https://img.shields.io/badge/Filament-FDAE4B?style=flat-square&logo=laravel&logoColor=white" alt="Filament" />
+  <img src="https://img.shields.io/badge/PHP%20SDK-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP SDK" />
+  <img src="https://img.shields.io/badge/Multi--tenant-4169E1?style=flat-square" alt="Multi-tenant" />
+  <img src="https://img.shields.io/badge/Stripe%20Checkout-635BFF?style=flat-square&logo=stripe&logoColor=white" alt="Stripe" />
+  <img src="https://img.shields.io/badge/Sentry-362D59?style=flat-square&logo=sentry&logoColor=white" alt="Sentry" />
+</p>
+
+---
+
+## 🚀 More I've Worked On
 
 | Project | What it is | Stack |
 | --- | --- | --- |
-| **FoloPrint** | Multi-tenant print-on-demand commerce platform, live in production | `Laravel` `Filament` `Vite` |
+| **FoloPrint** | Print-on-demand storefront running on the engine, live in production | `Laravel` `Filament` `Vite` |
 | **qrfolo** | QR product: REST API, web app, and an analytics pipeline | `NestJS` `Prisma` `PostgreSQL` `Redis` `NATS` |
 | **CMS Core Starter** | Reusable, step-gated CMS backend starter package | `NestJS` `Prisma` `TypeScript` |
 | **CarVerse** | Premium car discovery platform | `Next.js` `React` `Tailwind` |

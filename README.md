@@ -124,12 +124,13 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
 
 ---
 
-## 🌱 Currently Learning
+## 🎯 What I Work With Confidently
 
-- Advanced Spring Security and JWT (access + refresh, rotation)
-- Microservices and message-driven systems
-- Testing: JUnit, integration tests, and contract tests
-- CI/CD with GitHub Actions
+- Secure auth: Spring Security + JWT (access + refresh, token rotation)
+- Clean, layered architecture and predictable API contracts
+- Multi-tenant systems and message-driven services (NATS, Redis)
+- Testing: JUnit, integration, and contract tests
+- CI/CD pipelines with GitHub Actions
 
 ---
 

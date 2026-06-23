@@ -114,6 +114,7 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
 
 | Project | What it is | Stack |
 | --- | --- | --- |
+| **FoloPrint Design Studio** | In-browser print design + mockup studio (production print file plus rendered preview per side) | `TypeScript` `React` `Canvas` |
 | **FoloPrint** | Print-on-demand storefront running on the engine, live in production | `Laravel` `Filament` `Vite` |
 | **qrfolo** | QR product: REST API, web app, and an analytics pipeline | `NestJS` `Prisma` `PostgreSQL` `Redis` `NATS` |
 | **CMS Core Starter** | Reusable, step-gated CMS backend starter package | `NestJS` `Prisma` `TypeScript` |
@@ -133,6 +134,13 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
 ---
 
 ## 📊 GitHub Stats
+
+<!--
+  Most of my work lives in private repos, so the PUBLIC github-readme-stats
+  instance below shows almost nothing. To count private contributions,
+  self-host github-readme-stats with a personal access token and replace
+  "github-readme-stats.vercel.app" with your own deployment URL.
+-->
 
 <p align="center">
   <img height="165" src="https://github-readme-stats.vercel.app/api?username=Mnourkh01&show_icons=true&hide_border=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="stats" />

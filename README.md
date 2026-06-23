@@ -18,6 +18,17 @@
   <img src="https://komarev.com/ghpvc/?username=Mnourkh01&style=flat-square&color=7F52FF&label=Profile+views" alt="views" />
 </p>
 
+<!-- Snake hero -->
+<h3 align="center">🐍 Watch the snake clear my contribution grid</h3>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/output/github-snake.svg" />
+    <img alt="snake animation eating the github contribution graph" src="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/output/github-snake.svg" width="100%" />
+  </picture>
+</p>
+
 ---
 
 ## 👋 About Me
@@ -90,8 +101,8 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
 
 <p>
   <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel" />
-  <img src="https://img.shields.io/badge/Filament-FDAE4B?style=flat-square&logo=laravel&logoColor=white" alt="Filament" />
-  <img src="https://img.shields.io/badge/PHP%20SDK-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP SDK" />
+  <img src="https://img.shields.io/badge/Filament-FDAE4B?style=flat-square&labelColor=FDAE4B&color=1f1f1f" alt="Filament" />
+  <img src="https://img.shields.io/badge/Server--side%20PHP%20SDK-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP SDK" />
   <img src="https://img.shields.io/badge/Multi--tenant-4169E1?style=flat-square" alt="Multi-tenant" />
   <img src="https://img.shields.io/badge/Stripe%20Checkout-635BFF?style=flat-square&logo=stripe&logoColor=white" alt="Stripe" />
   <img src="https://img.shields.io/badge/Sentry-362D59?style=flat-square&logo=sentry&logoColor=white" alt="Sentry" />
@@ -133,23 +144,7 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Mnourkh01&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&row=1&column=7" alt="trophies" />
-</p>
-
-<p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mnourkh01&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Graph" alt="activity graph" />
-</p>
-
----
-
-## 🐍 Watch the snake eat my contributions
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/output/github-snake.svg" />
-    <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/output/github-snake.svg" />
-  </picture>
 </p>
 
 ---

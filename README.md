@@ -13,7 +13,8 @@
 <!-- Quick facts -->
 <p align="center">
   <img src="https://img.shields.io/badge/Amman,%20Jordan-2E3440?style=flat-square&logo=googlemaps&logoColor=white" alt="Location" />
-  <img src="https://img.shields.io/badge/Full--Stack-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Role" />
+  <a href="https://portfolio.m-nourkh01.workers.dev"><img src="https://img.shields.io/badge/Portfolio-0B0F0C?style=flat-square&logo=react&logoColor=00ff5f" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/mohammad-nour-alkhusheiny-467bbb3b6/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:m.nourkh01@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
   <img src="https://komarev.com/ghpvc/?username=Mnourkh01&style=flat-square&color=7F52FF&label=Profile+views" alt="views" />
 </p>
@@ -45,7 +46,7 @@ val mohammad = Developer(
 )
 ```
 
-I started on the backend (Kotlin, Java, Spring Boot) and grew outward into TypeScript and PHP across real production work at **Folowise**. My strongest build is a **multi-tenant commerce engine** (foloengine v3) that powers live storefronts, plus a QR product, CMS starters, and storefronts around it. I care about clean architecture, boundary validation, consistent error envelopes, and APIs that behave predictably under load. Roughly a year in, and shipping for real.
+I started on the backend (Kotlin, Java, Spring Boot) and grew outward into TypeScript and PHP across real production work at **Folowise**. My strongest build is a **multi-tenant commerce engine** (foloengine v3) that powers live storefronts, plus a QR product, CMS starters, and storefronts around it. I care about clean architecture, boundary validation, consistent error envelopes, and APIs that behave predictably under load. Shipping to production for 2+ years, owning architecture end to end from API contracts to CI/CD.
 
 ---
 
@@ -114,13 +115,14 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
 
 | Project | What it is | Stack |
 | --- | --- | --- |
-| **FoloPrint Design Studio** | In-browser print design + mockup studio (production print file plus rendered preview per side) | `TypeScript` `React` `Canvas` |
-| **FoloPrint** | Print-on-demand storefront running on the engine, live in production | `Laravel` `Filament` `Vite` |
+| [**FoloPrint**](https://foloprint.folowise.com/) ↗ | Print-on-demand storefront running on the engine, live in production | `Laravel` `Filament` `Vite` |
+| [**FoloPrint Design Studio**](https://github.com/Mnourkh01/FoloPrint-design-studio) | In-browser print design + mockup studio (production print file plus rendered preview per side) | `TypeScript` `React` `Canvas` |
 | **qrfolo** | QR product: REST API, web app, and an analytics pipeline | `NestJS` `Prisma` `PostgreSQL` `Redis` `NATS` |
+| [**Spring Boot API Starter**](https://github.com/Mnourkh01/Starter-Project) | Backend template: JWT auth + refresh-token rotation, layered structure, global error envelope | `Spring Boot` `Kotlin` `Flyway` |
+| [**URL Shortener**](https://github.com/Mnourkh01/url-shortener) | Short links with a Redis-cached redirect hot path and click analytics | `Kotlin` `Spring Boot` `Redis` |
+| [**Java 21 Auth Starter**](https://github.com/Mnourkh01/spring-boot-java-starter) | The auth baseline rebuilt in record-driven Java 21, Docker + CI | `Java 21` `Spring Boot` `Docker` |
+| [**CarVerse**](https://github.com/Mnourkh01/CarVerse-website-project) | Premium car discovery platform | `Next.js` `React` `Tailwind` |
 | **CMS Core Starter** | Reusable, step-gated CMS backend starter package | `NestJS` `Prisma` `TypeScript` |
-| **CarVerse** | Premium car discovery platform | `Next.js` `React` `Tailwind` |
-| **Spring Boot API Starter** | Backend template: JWT security, layered structure, global error handling | `Spring Boot` `Spring Security` `Flyway` |
-| **FoloStore** | WordPress + WooCommerce starter theme built from editable patterns | `WordPress` `WooCommerce` `Elementor` |
 
 ---
 
@@ -137,11 +139,22 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
 ## 📊 GitHub Activity
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mnourkh01&hide_border=true&theme=tokyonight" alt="contribution streak" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Mnourkh01&show_icons=true&include_all_commits=true&hide_border=true&theme=tokyonight" alt="github stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mnourkh01&layout=compact&langs_count=8&hide_border=true&theme=tokyonight" alt="top languages" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=Mnourkh01&hide_border=true&theme=tokyonight" alt="contribution streak" />
 </p>
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mnourkh01&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Graph" alt="contribution activity graph" />
+</p>
+
+<!-- lowlighter/metrics: generated by .github/workflows/metrics.yml. -->
+<!-- Renders after you add the METRICS_TOKEN secret and the workflow runs once. -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/main/github-metrics.svg" alt="GitHub metrics dashboard" width="100%" />
 </p>
 
 ---

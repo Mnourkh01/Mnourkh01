@@ -1,0 +1,44 @@
+name: Metrics
+
+on:
+  # Refresh daily
+  schedule:
+    - cron: "0 6 * * *"
+  # Manual run from the Actions tab (use this for the first render after
+  # adding the METRICS_TOKEN secret).
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate metrics
+        uses: lowlighter/metrics@latest
+        with:
+          # Personal Access Token stored as a repo secret (see README setup note).
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Mnourkh01
+          filename: github-metrics.svg
+          committer_branch: main
+
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Amman
+
+          # Detailed languages breakdown
+          plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+
+          # 3D contribution calendar
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+          # Coding habits / facts
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes

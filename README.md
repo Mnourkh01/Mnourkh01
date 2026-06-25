@@ -161,10 +161,6 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
   </p>
 -->
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Mnourkh01&theme=darkhub&no-frame=true&no-bg=true&column=7&margin-w=8" alt="trophies" />
-</p>
-
 ---
 
 <p align="center">

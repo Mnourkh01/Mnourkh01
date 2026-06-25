@@ -33,15 +33,18 @@
   <img src="https://komarev.com/ghpvc/?username=Mnourkh01&style=flat-square&color=7F52FF&label=Profile+views" alt="views" />
 </p>
 
-<!-- Snake hero -->
-<h3 align="center">🐍 Watch the snake clear my contribution grid</h3>
+<!-- Self-playing snake, hand-built in pure animated SVG -->
+<h3 align="center">🐍 A snake that actually grows, built by hand in pure animated SVG</h3>
+<p align="center">
+  <sub>No JavaScript, no canvas, no game engine. Just CSS-driven sprites that autoplay right here in the README. It grows a segment every time it eats.</sub>
+</p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/output/github-snake.svg" />
-    <img alt="snake animation eating the github contribution graph" src="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/output/github-snake.svg" width="100%" />
-  </picture>
+  <img src="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/main/assets/snake-game.svg" width="92%" alt="Self-playing arcade snake that grows one segment each time it eats an apple" />
+</p>
+
+<p align="center">
+  <sub>Source in <code>/scripts/snake-svg.mjs</code>.</sub>
 </p>
 
 ---

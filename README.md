@@ -10,6 +10,20 @@
   </a>
 </p>
 
+<!-- Live portfolio CTA -->
+<p align="center">
+  <a href="https://portfolio.m-nourkh01.workers.dev">
+    <img src="https://img.shields.io/badge/Visit%20my%20live%20portfolio-00C24E?style=for-the-badge&logo=react&logoColor=white&labelColor=0B0F0C" alt="Visit my live portfolio" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Mnourkh01/portfolio">
+    <img src="https://img.shields.io/badge/Source-1f2328?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio source code" />
+  </a>
+</p>
+<p align="center">
+  <a href="https://portfolio.m-nourkh01.workers.dev"><sub>portfolio.m-nourkh01.workers.dev</sub></a>
+</p>
+
 <!-- Quick facts -->
 <p align="center">
   <img src="https://img.shields.io/badge/Amman,%20Jordan-2E3440?style=flat-square&logo=googlemaps&logoColor=white" alt="Location" />

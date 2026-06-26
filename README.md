@@ -35,17 +35,16 @@
 
 <!-- Self-playing snake, hand-built in pure animated SVG -->
 <h3 align="center">🐍 A snake that actually grows, built by hand in pure animated SVG</h3>
-<p align="center">
-  <sub>No JavaScript, no canvas, no game engine. Just CSS-driven sprites that autoplay right here in the README. It grows a segment every time it eats.</sub>
-</p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/main/assets/snake-game.svg" width="92%" alt="Self-playing arcade snake that grows one segment each time it eats an apple" />
 </p>
 
+<!--
 <p align="center">
   <sub>Source in <code>/scripts/snake-svg.mjs</code>.</sub>
 </p>
+-->
 
 ---
 

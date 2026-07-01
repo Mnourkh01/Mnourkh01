@@ -1,0 +1,54 @@
+name: GitHub Stats
+
+# Renders assets/stats.svg + assets/contributions.svg from live GitHub data and
+# commits them, so the README shows fresh stats WITHOUT any rate-limited
+# third-party image service (that was the old failure mode). Works out of the
+# box with the built-in GITHUB_TOKEN (public data) -- no PAT, no setup. If you
+# ever want private-contribution data too, add a classic PAT as the STATS_TOKEN
+# repo secret and it is used automatically.
+
+on:
+  schedule:
+    - cron: "0 4 * * *"      # daily refresh
+  workflow_dispatch:          # manual run from the Actions tab
+  push:
+    branches: [main]
+    paths:                    # only re-render when the generator itself changes
+      - "scripts/github-stats.mjs"
+      - ".github/workflows/stats.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: github-stats
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate stats SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || github.token }}
+          GH_USER: ${{ github.repository_owner }}
+        run: node scripts/github-stats.mjs
+
+      - name: Commit refreshed SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/stats.svg assets/contributions.svg
+          if git diff --cached --quiet; then
+            echo "No stat changes to commit."
+          else
+            git commit -m "chore(stats): refresh GitHub stats SVGs [skip ci]"
+            git push
+          fi

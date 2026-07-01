@@ -57,15 +57,15 @@ val mohammad = Developer(
 I started on the backend (Kotlin, Java, Spring Boot) and grew outward into TypeScript, PHP, and Rust across real production work at **Folowise**. My deepest build is a **multi-tenant commerce engine** (foloengine v3) that powers live storefronts. Alongside it I ship my own products, most recently **EchoFlow**, an offline voice-to-text app for Windows. I care about clean architecture, boundary validation, consistent error envelopes, and systems that behave predictably under load. I own work end to end, from API contracts to CI/CD.
 
 <details>
-<summary><b>What I care about in production code</b></summary>
+<summary><b>How I approach production systems</b></summary>
 
 <br>
 
-- **Correctness at the boundary.** Validate input where it enters the system, not three layers deep. One error envelope, predictable shapes.
-- **Security is not a feature you bolt on.** Stateless auth, refresh-token rotation with reuse detection, least privilege, secrets out of the repo.
-- **Isolation by design.** Multi-tenant means database-per-tenant and no cross-tenant leakage, enforced, not hoped for.
-- **Observable or it did not happen.** Structured logs, Sentry, and traces you can actually read at 3am.
-- **Reversible and boring.** Small migrations, clean rollbacks, and code a future maintainer can follow without a map.
+- Input validation at the API boundary, with a single consistent error envelope.
+- Stateless JWT auth, refresh-token rotation with reuse detection, and role-based access control.
+- Tenant isolation enforced at the data layer (database per tenant, no cross-tenant access paths).
+- Observability through structured logging, Sentry, and request tracing across services.
+- Small reversible migrations, CI gates, and predictable rollbacks.
 
 </details>
 

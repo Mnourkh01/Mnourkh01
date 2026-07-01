@@ -53,7 +53,8 @@ const TAIL_R = CELL * 0.11;          // pointed tail
 // the tube with no lump/seam) and elongated toward the snout. HH = half-width
 // across the body, HW = half-length along travel.
 const HH = BODY_R * 1.12;            // head half-width (a touch fatter than body)
-const HW = BODY_R * 1.85;            // head half-length (snout reach)
+const HW = BODY_R * 1.62;            // head half-length (snout reach); kept short so
+                                     // the head never overshoots a cell on a turn
 
 const center = (cx, cy) => [OX + cx * CELL + CELL / 2, OY + cy * CELL + CELL / 2];
 
@@ -63,21 +64,31 @@ for (let y = 0; y < ROWS; y++) {
   if (y % 2 === 0) for (let x = 0; x < COLS; x++) path.push([x, y]);
   else for (let x = COLS - 1; x >= 0; x--) path.push([x, y]);
 }
-// forward ends at (0, ROWS-1) because ROWS is even -> climb the left column home
-for (let y = ROWS - 2; y >= 0; y--) path.push([0, y]);
+// forward ends at (0, ROWS-1) because ROWS is even -> climb the left column home.
+// Stop the climb at (0,1): the wrap index N -> 0 lands on (0,0) itself, so pushing
+// (0,0) here too would duplicate it -> a zero-length segment at the loop seam that
+// makes the head heading undefined (snaps to 0deg) on every restart. Ending at
+// (0,1) leaves a clean up-heading into the seam.
+for (let y = ROWS - 2; y >= 1; y--) path.push([0, y]);
 const N = path.length;            // loop length; index N wraps to index 0
 
 const pct = (i) => +((i / N) * 100).toFixed(3);
 const eatPct = (idx) => pct(idx);
 
-// heading angle (degrees) at each node, unwrapped so the head turns the short
-// way through corners instead of spinning 270 degrees.
+// heading angle (degrees) at each node, from the LOCAL TANGENT (prev -> next),
+// unwrapped so the head turns the short way. Using prev->next instead of
+// this->next is the fix for the head jutting out of the tube on turns: at a hard
+// single-cell 90deg U-turn, this->next snaps the head a full 90deg while its body
+// is still in the OLD row (snout stabs into an empty lane, round back pokes out).
+// The tangent makes the head BANK through the corner (0 -> 45 -> 135 -> 180)
+// instead of snapping, so it stays seated on the body. Straights are unaffected
+// (prev->next == forward there).
 const headings = [];
 let prevAng = 0;
 for (let i = 0; i <= N; i++) {
-  const [ax, ay] = path[i % N];
-  const [bx, by] = path[(i + 1) % N];
-  let ang = (Math.atan2(by - ay, bx - ax) * 180) / Math.PI;
+  const [px, py] = path[(i - 1 + N) % N];
+  const [nx, ny] = path[(i + 1) % N];
+  let ang = (Math.atan2(ny - py, nx - px) * 180) / Math.PI;
   if (i === 0) prevAng = ang;
   while (ang - prevAng > 180) ang -= 360;
   while (ang - prevAng < -180) ang += 360;
@@ -203,7 +214,7 @@ const eye = (sy) =>
   `<circle cx="${f(HW * 0.42 + HH * 0.1)}" cy="${f(sy * HH * 0.5 - HH * 0.12)}" r="${f(HH * 0.08)}" fill="#fff" opacity=".95"/>` +
   `</g>`;
 const headDetail =
-  `<ellipse cx="${f(HW * 0.5)}" cy="0" rx="${f(HW * 1.4)}" ry="${f(HH * 1.5)}" fill="url(#headHalo)" opacity=".85"/>` +
+  `<ellipse cx="${f(HW * 0.32)}" cy="0" rx="${f(HW * 1.12)}" ry="${f(HH * 1.25)}" fill="url(#headHalo)" opacity=".7"/>` +
   headShape +
   // top gloss for a rounded, glassy crown
   `<ellipse cx="${f(HW * 0.05)}" cy="${f(-HH * 0.42)}" rx="${f(HW * 0.62)}" ry="${f(HH * 0.4)}" fill="url(#gloss)" opacity=".5"/>` +

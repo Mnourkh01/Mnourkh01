@@ -31,8 +31,6 @@
 </p>
 
 <!-- Self-playing snake game, hand-built in animated SVG (no game engine, just SVG + CSS + SMIL) -->
-<h3 align="center">A real snake game, hand-built in pure animated SVG. The autopilot runs a winding Hamiltonian tour, the D-pad shows its inputs live, and the stage clears itself. No JS, no game engine.</h3>
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/main/assets/snake-game.svg" width="92%" alt="Self-playing neon snake game: an autopilot snake runs a winding tour, eats orbs and a gold bonus, grows to length 14, sets a new record and clears the stage" />
 </p>

@@ -30,9 +30,9 @@
   <img src="https://komarev.com/ghpvc/?username=Mnourkh01&style=flat-square&color=7F52FF&label=Profile+views" alt="views" />
 </p>
 
-<!-- Self-playing snake game, hand-built in animated SVG (no game engine, just SVG + CSS + SMIL) -->
+<!-- Contribution City: last year of contributions as a neon city a snake eats, rebuilt daily by scripts/city-svg.mjs -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/main/assets/snake-game.svg" width="92%" alt="Self-playing neon snake game: an autopilot snake runs a winding tour, eats orbs and a gold bonus, grows to length 14, sets a new record and clears the stage" />
+  <img src="assets/contribution-city.svg" width="100%" alt="Contribution City: one neon building per day of my last year on GitHub, taller on busier days. A glowing snake eats the year week by week while counters roll up, then the skyline rebuilds." />
 </p>
 
 ---

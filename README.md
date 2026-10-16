@@ -12,7 +12,7 @@
 
 <!-- Primary CTAs -->
 <p align="center">
-  <a href="https://github.com/Mnourkh01/echoflow/releases/latest">
+  <a href="https://github.com/Mnourkh01/echoflow-releases/releases/latest">
     <img src="https://img.shields.io/badge/Download%20EchoFlow%20for%20Windows-00C24E?style=for-the-badge&logo=windows&logoColor=white&labelColor=0B0F0C" alt="Download EchoFlow" />
   </a>
   &nbsp;
@@ -25,7 +25,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Amman,%20Jordan-2E3440?style=flat-square&logo=googlemaps&logoColor=white" alt="Location" />
   <a href="https://portfolio.m-nourkh01.workers.dev"><img src="https://img.shields.io/badge/Portfolio-0B0F0C?style=flat-square&logo=react&logoColor=00ff5f" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/mohammad-nour-alkhusheiny-467bbb3b6/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/mohammad-nour-al-khusheiny-467bbb3b6/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:m.nourkh01@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
   <img src="https://komarev.com/ghpvc/?username=Mnourkh01&style=flat-square&color=7F52FF&label=Profile+views" alt="views" />
 </p>
@@ -74,10 +74,8 @@ I started on the backend (Kotlin, Java, Spring Boot) and grew outward into TypeS
 ### EchoFlow · offline voice-to-text for Windows
 
 <p>
-  <a href="https://github.com/Mnourkh01/echoflow/releases/latest"><img src="https://img.shields.io/github/v/release/Mnourkh01/echoflow?style=flat-square&label=latest&color=6DB33F" alt="latest release" /></a>
-  <a href="https://github.com/Mnourkh01/echoflow/releases/latest"><img src="https://img.shields.io/badge/Download-Windows%20x64-00C24E?style=flat-square&logo=windows&logoColor=white" alt="download" /></a>
-  <a href="https://github.com/Mnourkh01/echoflow"><img src="https://img.shields.io/badge/Source-1f2328?style=flat-square&logo=github&logoColor=white" alt="source" /></a>
-  <img src="https://img.shields.io/github/stars/Mnourkh01/echoflow?style=flat-square&color=ffd166&label=stars" alt="stars" />
+  <a href="https://github.com/Mnourkh01/echoflow-releases/releases/latest"><img src="https://img.shields.io/github/v/release/Mnourkh01/echoflow-releases?style=flat-square&label=latest&color=6DB33F" alt="latest release" /></a>
+  <a href="https://github.com/Mnourkh01/echoflow-releases/releases/latest"><img src="https://img.shields.io/badge/Download-Windows%20x64-00C24E?style=flat-square&logo=windows&logoColor=white" alt="download" /></a>
 </p>
 
 > Press a hotkey anywhere in Windows, speak, and your words are typed into whatever app you are in. All on your own machine.
@@ -115,7 +113,7 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
 
 | Project | What it is | Stack |
 | --- | --- | --- |
-| [**EchoFlow**](https://github.com/Mnourkh01/echoflow) ↗ | Offline voice-to-text desktop app, local Whisper, auto-type, EN/AR, live and downloadable | `Rust` `Tauri` `whisper.cpp` `TypeScript` |
+| [**EchoFlow**](https://github.com/Mnourkh01/echoflow-releases) ↗ | Offline voice-to-text desktop app, local Whisper, auto-type, EN/AR, live and downloadable | `Rust` `Tauri` `whisper.cpp` `TypeScript` |
 | [**FoloPrint**](https://foloprint.folowise.com/) ↗ | Print-on-demand storefront running on the engine, live in production | `Laravel` `Filament` `Vite` |
 | [**FoloPrint Design Studio**](https://github.com/Mnourkh01/FoloPrint-design-studio) | In-browser print design and mockup studio (production print file plus rendered preview per side) | `TypeScript` `React` `Canvas` |
 | **qrfolo** | QR product: REST API, web app, and an analytics pipeline | `NestJS` `Prisma` `PostgreSQL` `Redis` `NATS` |

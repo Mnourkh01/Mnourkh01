@@ -16,6 +16,7 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { withPrivateWork } from "./private-calendar.mjs";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const ASSETS = `${__dir}/../assets`;
@@ -204,7 +205,10 @@ function buildContrib(d) {
   const weeks = cal.weeks;
   if (!weeks || !weeks.length) throw new Error("empty contribution calendar");
 
-  const level = (c) => (c === 0 ? 0 : c <= 2 ? 1 : c <= 5 ? 2 : c <= 9 ? 3 : 4);
+  // quartiles of the active days, like the profile graph, so a busy year does not saturate
+  const active = weeks.flatMap((w) => w.contributionDays.map((d) => d.contributionCount)).filter((n) => n > 0).sort((x, y) => x - y);
+  const q = [0.25, 0.5, 0.75].map((f) => active[Math.floor(f * (active.length - 1))] || 0);
+  const level = (c) => (c === 0 ? 0 : c <= q[0] ? 1 : c <= q[1] ? 2 : c <= q[2] ? 3 : 4);
   const cell = 11, gap = 3, step = cell + gap;
   const gridX = 40, gridY = 74;
   const W = gridX + weeks.length * step + 18;
@@ -260,6 +264,14 @@ try {
   mkdirSync(ASSETS, { recursive: true });
   const data = await gql(QUERY, { login: USER });
   if (!data || !data.user) throw new Error("no user data returned");
+  if (process.env.PRIVATE_AWARE === "1") {
+    const cc = data.user.contributionsCollection;
+    const p = await withPrivateWork(cc.contributionCalendar, { user: USER, token: TOKEN });
+    cc.contributionCalendar = p.calendar;
+    cc.totalCommitContributions = Math.max(cc.totalCommitContributions, p.commits);
+    cc.totalPullRequestContributions = Math.max(cc.totalPullRequestContributions, p.prs);
+    cc.totalIssueContributions = Math.max(cc.totalIssueContributions, p.issues);
+  }
   buildStats(data.user);
   buildContrib(data.user);
   console.log("OK");

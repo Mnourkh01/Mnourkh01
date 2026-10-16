@@ -1,11 +1,10 @@
 name: GitHub Stats
 
-# Renders assets/stats.svg + assets/contributions.svg from live GitHub data and
-# commits them, so the README shows fresh stats WITHOUT any rate-limited
-# third-party image service (that was the old failure mode). Works out of the
-# box with the built-in GITHUB_TOKEN (public data) -- no PAT, no setup. If you
-# ever want private-contribution data too, add a classic PAT as the STATS_TOKEN
-# repo secret and it is used automatically.
+# Renders assets/stats.svg, assets/contributions.svg and
+# assets/contribution-city.svg from live GitHub data and commits them, so the
+# README shows fresh stats without a rate-limited third-party image service.
+# Needs a classic PAT (scopes: repo, read:user) as the STATS_TOKEN repo secret:
+# the numbers include private-repo work, which the built-in token cannot see.
 
 on:
   schedule:
@@ -16,6 +15,7 @@ on:
     paths:                    # only re-render when the generator itself changes
       - "scripts/github-stats.mjs"
       - "scripts/city-svg.mjs"
+      - "scripts/private-calendar.mjs"
       - ".github/workflows/stats.yml"
 
 permissions:
@@ -28,8 +28,18 @@ concurrency:
 jobs:
   stats:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
+    env:
+      # The SVGs count private-repo work, which only a token that can read those
+      # repos sees. Without it, keep the committed SVGs rather than overwrite
+      # them with public-only numbers.
+      HAS_STATS_TOKEN: ${{ secrets.STATS_TOKEN != '' }}
+      PRIVATE_AWARE: "1"
     steps:
+      - name: Skip refresh without STATS_TOKEN
+        if: env.HAS_STATS_TOKEN != 'true'
+        run: echo "::warning::STATS_TOKEN is not set, the stats SVGs are not refreshed."
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -37,17 +47,24 @@ jobs:
           node-version: 20
 
       - name: Generate stats SVGs
+        if: env.HAS_STATS_TOKEN == 'true'
         env:
-          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || github.token }}
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
         run: node scripts/github-stats.mjs
 
       - name: Generate contribution city
+        id: city
+        if: env.HAS_STATS_TOKEN == 'true'
         continue-on-error: true
         env:
-          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || github.token }}
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
         run: node scripts/city-svg.mjs
+
+      - name: Flag a failed city render
+        if: steps.city.outcome == 'failure'
+        run: echo "::warning::contribution city failed to render, the committed one is kept."
 
       - name: Commit refreshed SVGs
         run: |

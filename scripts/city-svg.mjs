@@ -7,6 +7,7 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { withPrivateWork } from "./private-calendar.mjs";
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const OUT = `${__dir}/../assets/contribution-city.svg`;
@@ -343,7 +344,8 @@ function mix(a, b, f) {
   return "#" + x.map((v, i) => Math.round(v + (y[i] - v) * f).toString(16).padStart(2, "0")).join("");
 }
 
-const cal = await fetchCalendar();
+let cal = await fetchCalendar();
+if (process.env.PRIVATE_AWARE === "1") cal = (await withPrivateWork(cal, { user: USER, token: TOKEN })).calendar;
 const svg = build(cal);
 mkdirSync(dirname(OUT), { recursive: true });
 writeFileSync(OUT, svg);

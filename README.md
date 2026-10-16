@@ -76,11 +76,12 @@ I started on the backend (Kotlin, Java, Spring Boot) and grew outward into TypeS
 <p>
   <a href="https://github.com/Mnourkh01/echoflow-releases/releases/latest"><img src="https://img.shields.io/github/v/release/Mnourkh01/echoflow-releases?style=flat-square&label=latest&color=6DB33F" alt="latest release" /></a>
   <a href="https://github.com/Mnourkh01/echoflow-releases/releases/latest"><img src="assets/img/badge-download-windows-x64-00c24e-flat-square.svg" alt="download" /></a>
+  <a href="https://github.com/Mnourkh01/echoflow"><img src="assets/img/badge-source-1f2328-flat-square.svg" alt="source code" /></a>
 </p>
 
 > Press a hotkey anywhere in Windows, speak, and your words are typed into whatever app you are in. All on your own machine.
 
-EchoFlow runs **OpenAI Whisper locally on your CPU** through `whisper.cpp` (models from `tiny` to `large-v3-turbo`), so your audio never has to leave the device. Push to talk, it transcribes, then auto-types the result. English and Arabic, with optional **translate / clean / prompt** modes powered by cloud providers (OpenAI, Anthropic) when you want them. It keeps a searchable local history in SQLite, updates itself in one click, evicts idle models from memory, and protects its own window from screen capture.
+EchoFlow runs **OpenAI Whisper on your own machine** through `whisper.cpp` (on the graphics card with Vulkan, falling back to the CPU), so your audio never leaves the device. Press a hotkey, speak, and the text is typed where your cursor is. English, Arabic with its dialects, and six European languages, plus optional **clean writing, vibe engineer and translate** modes that send only the text to the AI you choose. It keeps a searchable local history in SQLite, exports to TXT, SRT and DOCX, and updates itself in one click.
 
 Built with **Rust + Tauri v2** for a tiny, native footprint, a TypeScript UI, `cpal` for audio capture, and SQLite for history.
 
@@ -138,7 +139,7 @@ The engine is the shared brain and control plane for a fleet of storefronts. It 
 
 | Project | What it is | Stack |
 | --- | --- | --- |
-| [**EchoFlow**](https://github.com/Mnourkh01/echoflow-releases) ↗ | Offline voice-to-text desktop app, local Whisper, auto-type, EN/AR, live and downloadable | `Rust` `Tauri` `whisper.cpp` `TypeScript` |
+| [**EchoFlow**](https://github.com/Mnourkh01/echoflow) ↗ | Offline voice-to-text desktop app, local Whisper, auto-type, EN/AR, live and downloadable | `Rust` `Tauri` `whisper.cpp` `TypeScript` |
 | **Warsha** (private beta) | One Windows workspace for terminals and AI coding agents: Claude Code, Codex and Gemini side by side, every pane and AI conversation survives a restart | `Rust` `Tauri v2` `React` `TypeScript` |
 | [**Karmetta**](https://karmetta.com) ↗ | Restaurant platform on the engine: QR table ordering, bilingual menu, kitchen display split by station, live in production | `Laravel` `Alpine.js` `Tailwind` |
 | [**FoloPrint**](https://foloprint.folowise.com/) ↗ | Print-on-demand storefront running on the engine, live in production | `Laravel` `Filament` `Vite` |

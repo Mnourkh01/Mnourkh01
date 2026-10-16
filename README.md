@@ -92,6 +92,31 @@ Built with **Rust + Tauri v2** for a tiny, native footprint, a TypeScript UI, `c
   <img src="assets/img/badge-sqlite-003b57-flat-square.svg" alt="SQLite" />
 </p>
 
+### Warsha · one workspace for terminals and AI coding agents
+
+<p>
+  <img src="assets/img/badge-status-private-beta-flat-square.svg" alt="status: private beta" />
+  <img src="assets/img/badge-platform-windows-flat-square.svg" alt="platform: Windows" />
+</p>
+
+> A normal day with AI coding agents is five terminal windows, two chat tabs and no idea which agent is waiting for you. Warsha puts all of it in one native window, per project.
+
+Claude Code, Codex, Gemini, OpenCode and Cursor run **side by side** in up to 10 live panes per workspace, and each pane shows its model and whether it is working, idle or **needs you**. Close the app, update it or let it crash: **every pane comes back as itself and every AI pane resumes its own conversation**. Agents and chat run on the subscription you already pay for, and Warsha never reads or copies a vendor's credentials. A planning canvas lets the AI draw the plan while you watch, through a local MCP server.
+
+One rule outranks every feature: **the terminal comes first**. AI surfaces may not cost terminal correctness, resize integrity, process ownership or idle CPU.
+
+Built as a **Rust core** (ConPTY sessions, Windows job objects for clean process-tree kills, atomic versioned persistence) behind thin Tauri v2 adapters, with a **React + TypeScript** UI and `xterm.js` running outside React. Used every day, installs and updates itself. The source is private.
+
+<p>
+  <img src="assets/img/badge-rust-000000-flat-square.svg" alt="Rust" />
+  <img src="assets/img/badge-tauri-v2-24c8db-flat-square.svg" alt="Tauri" />
+  <img src="assets/img/badge-react-61dafb-flat-square.svg" alt="React" />
+  <img src="assets/img/badge-typescript-3178c6-flat-square.svg" alt="TypeScript" />
+  <img src="assets/img/badge-xterm-js-111111-flat-square.svg" alt="xterm.js" />
+  <img src="assets/img/badge-conpty-0078d6-flat-square.svg" alt="ConPTY" />
+  <img src="assets/img/badge-mcp-7f52ff-flat-square.svg" alt="MCP" />
+</p>
+
 ### Folowise Commerce Engine · foloengine v3
 
 > My deepest project. A multi-tenant commerce **engine**, not just a store.

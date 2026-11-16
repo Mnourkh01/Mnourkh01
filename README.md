@@ -1,220 +1,57 @@
-<!-- Banner -->
-<p align="center">
-  <img src="assets/img/banner-header.svg" alt="banner" />
-</p>
+# Mohammad Nour Al-Khusheiny
 
-<!-- Typing subtitle -->
-<p align="center">
-  <a href="https://github.com/Mnourkh01">
-    <img src="assets/img/typing.svg" alt="typing" />
-  </a>
-</p>
+**AI Product Engineer** · Amman, Jordan (UTC+3) · open to remote roles
 
-<!-- Primary CTAs -->
-<p align="center">
-  <a href="https://github.com/Mnourkh01/echoflow-releases/releases/latest">
-    <img src="assets/img/badge-download-echoflow-for-windows-00c24e-for-the-badge.svg" alt="Download EchoFlow" />
-  </a>
-  &nbsp;
-  <a href="https://portfolio.m-nourkh01.workers.dev">
-    <img src="assets/img/badge-live-portfolio-7f52ff-for-the-badge.svg" alt="Live portfolio" />
-  </a>
-</p>
+I build products end to end, from the data model and API to the screens people use. I also build the tooling that lets AI coding agents do real work inside a tested engineering process.
 
-<!-- Quick facts -->
-<p align="center">
-  <img src="assets/img/badge-amman-jordan-2e3440-flat-square.svg" alt="Location" />
-  <a href="https://portfolio.m-nourkh01.workers.dev"><img src="assets/img/badge-portfolio-0b0f0c-flat-square.svg" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/mohammad-nour-al-khusheiny-467bbb3b6/"><img src="assets/img/badge-linkedin-0a66c2-flat-square.svg" alt="LinkedIn" /></a>
-  <a href="mailto:m.nourkh01@gmail.com"><img src="assets/img/badge-email-d14836-flat-square.svg" alt="Email" /></a>
-  <img src="https://komarev.com/ghpvc/?username=Mnourkh01&style=flat-square&color=7F52FF&label=Profile+views" alt="views" />
-</p>
+At [Folowise](https://folowise.com) I work on a multi-tenant commerce platform and the restaurant, retail and print products that run on it, and I am the sole developer of **Warsha**, an internal Windows workspace for AI coding agents that I built for myself and a teammate. That code is private, so this page links what you can open and describes the rest plainly.
 
-<!-- Contribution City: last year of contributions as a neon city a snake eats, rebuilt daily by scripts/city-svg.mjs -->
-<p align="center">
-  <img src="assets/contribution-city.svg" width="100%" alt="Contribution City: one neon building per day of my last year on GitHub, taller on busier days. A glowing snake eats the year week by week while counters roll up, then the skyline rebuilds." />
-</p>
+[Portfolio](https://mohammad-nour.pages.dev) · [LinkedIn](https://www.linkedin.com/in/mohammadnour-al-khusheiny/) · [Email](mailto:m.nourkh01@gmail.com)
 
----
+## What I work on
 
-## About Me
+**AI agent tooling.** Warsha runs Claude Code, Codex, Gemini, OpenCode and Cursor side by side in real Windows terminals, shows which agent is waiting for you, and brings every session back after a crash or an update. Agents draw plans on a canvas through a local MCP server, and a voice assistant operates the app through 35 tools.
 
-```kotlin
-val mohammad = Developer(
-    role       = "Backend-focused Full-Stack Developer",
-    company    = "Folowise",
-    location   = "Amman, Jordan",
-    experience = "2.5+ years shipping to production",
-    speaks     = listOf("Kotlin", "Java", "TypeScript", "PHP", "Rust", "SQL"),
-    builds     = listOf("Spring Boot", "Ktor", "NestJS", "Next.js", "Laravel", "Tauri"),
-    caresAbout = listOf("clean architecture", "API security", "production readiness"),
-    motto      = "Get the fundamentals right before reaching for the clever stuff."
-)
-```
+**AI inside products.** The model does the language work and tested code owns every decision. Example: an adaptive skill test where five single-purpose Claude agents return schema-checked JSON and plain TypeScript computes every score, traced end to end with Langfuse.
 
-I started on the backend (Kotlin, Java, Spring Boot) and grew outward into TypeScript, PHP, and Rust across real production work at **Folowise**. My deepest build is a **multi-tenant commerce engine** (foloengine v3) that powers live storefronts. Alongside it I ship my own products, most recently **EchoFlow**, an offline voice-to-text app for Windows. I care about clean architecture, boundary validation, consistent error envelopes, and systems that behave predictably under load. I own work end to end, from API contracts to CI/CD.
+**Multi-tenant SaaS.** A Laravel commerce engine built from reusable packages, with a control plane that licenses and monitors live storefronts over signed APIs, and the restaurant ordering, booking and admin products built on it. English and Arabic, right to left included.
 
-<details>
-<summary><b>How I approach production systems</b></summary>
+## Open source
 
-<br>
+| Project | What it is | What it shows |
+|---|---|---|
+| [EchoFlow](https://github.com/Mnourkh01/echoflow) | Offline English and Arabic voice to text for Windows. Whisper runs on the device; optional AI rewrite modes. | Rust and Tauri desktop engineering, on-device speech AI, signed auto-update, 17 public releases |
+| [Adaptive AI Skill Assessment](https://github.com/Mnourkh01/dynamic-wizard-questions) | 25-question adaptive test for technical roles, scored out of 1000 by topic. | Agents with structured output, deterministic scoring, LLM tracing, about 136 tests |
+| [FoloPrint Design Studio](https://github.com/Mnourkh01/FoloPrint-design-studio) | Browser design editor for print-on-demand with server-rendered mockups. | TypeScript monorepo (NestJS, Next.js, Prisma), shared geometry between editor and server, about 280 tests, CI |
+| [URL Shortener](https://github.com/Mnourkh01/url-shortener) | Short links with a Redis-cached redirect path and click analytics. | Spring Boot and Kotlin, cache-aside, rate limiting, Flyway, tests and CI |
 
-- Input validation at the API boundary, with a single consistent error envelope.
-- Stateless JWT auth, refresh-token rotation with reuse detection, and role-based access control.
-- Tenant isolation enforced at the data layer (database per tenant, no cross-tenant access paths).
-- Observability through structured logging, Sentry, and request tracing across services.
-- Small reversible migrations, CI gates, and predictable rollbacks.
+## Company work (private source)
 
-</details>
+**Warsha**, sole developer, internal tool in private beta, used daily by me and a teammate. Rust core (ConPTY terminals, Windows job objects, crash-safe persistence) behind Tauri 2, with a React and TypeScript UI. Measured on a reference machine: keystroke to screen p95 3.5 ms, ten idle panes at 1.25 percent of one CPU core. 23 beta releases, 1,100+ Rust tests, 1,000+ frontend tests, 175 written architecture decisions.
 
----
+**FoloEngine**, co-built. Laravel engine of reusable Composer packages and a control plane that issues licences, grants features per site through a fail-closed gate and verifies HMAC-signed health reports from each store. I started its V3 codebase and wrote about half of its commits. It runs live stores: [Printman](https://printmanjo.com), where I built the admin, orders and checkout, and [Opti4Club](https://opti4club.com), whose WordPress to Laravel rebuild I led. It has since grown into the company's Platform V4.
 
-## Featured Work
+**Karmetta on Platform V4**, team of four. I authored 84 merged pull requests in 13 days: table booking on a floor-plan picker, QR and counter ordering, the kitchen board, and integrity fixes for bookings and the cash drawer. The V4 version is launching soon; the current Karmetta is live at [karmetta.com](https://karmetta.com).
 
-### EchoFlow · offline voice-to-text for Windows
+## How I work
 
-<p>
-  <a href="https://github.com/Mnourkh01/echoflow-releases/releases/latest"><img src="https://img.shields.io/github/v/release/Mnourkh01/echoflow-releases?style=flat-square&label=latest&color=6DB33F" alt="latest release" /></a>
-  <a href="https://github.com/Mnourkh01/echoflow-releases/releases/latest"><img src="assets/img/badge-download-windows-x64-00c24e-flat-square.svg" alt="download" /></a>
-  <a href="https://github.com/Mnourkh01/echoflow"><img src="assets/img/badge-source-1f2328-flat-square.svg" alt="source code" /></a>
-</p>
+- A short written plan before code, and a decision record when the choice is hard to undo.
+- AI coding agents write much of the first draft. I own the design, the review and what ships.
+- Changes pass automated checks, then a browser, device or API check where the change has one, then code review.
+- Numbers here are counted from releases, tests or measurements.
 
-> Press a hotkey anywhere in Windows, speak, and your words are typed into whatever app you are in. All on your own machine.
+## Stack
 
-EchoFlow runs **OpenAI Whisper on your own machine** through `whisper.cpp` (on the graphics card with Vulkan, falling back to the CPU), so your audio never leaves the device. Press a hotkey, speak, and the text is typed where your cursor is. English, Arabic with its dialects, and six European languages, plus optional **clean writing, vibe engineer and translate** modes that send only the text to the AI you choose. It keeps a searchable local history in SQLite, exports to TXT, SRT and DOCX, and updates itself in one click.
+- **Languages:** TypeScript, PHP, Rust, Kotlin, Java, SQL
+- **Backend:** Laravel, Node.js (Hono, NestJS), Spring Boot, Ktor, PostgreSQL, MySQL, SQLite, Redis
+- **Frontend and desktop:** React, Next.js, Tailwind, Alpine.js, Tauri 2, xterm.js
+- **AI:** Claude Agent SDK, MCP servers, tool calling, structured output with Zod, Langfuse tracing, whisper.cpp, Gemini Live
+- **Delivery:** GitHub Actions, Docker, Cloudflare, Sentry, Pest, PHPUnit, Vitest, Playwright
 
-Built with **Rust + Tauri v2** for a tiny, native footprint, a TypeScript UI, `cpal` for audio capture, and SQLite for history.
+## Activity
 
-<p>
-  <img src="assets/img/badge-rust-000000-flat-square.svg" alt="Rust" />
-  <img src="assets/img/badge-tauri-v2-24c8db-flat-square.svg" alt="Tauri" />
-  <img src="assets/img/badge-whisper-cpp-111111-flat-square.svg" alt="whisper.cpp" />
-  <img src="assets/img/badge-typescript-3178c6-flat-square.svg" alt="TypeScript" />
-  <img src="assets/img/badge-sqlite-003b57-flat-square.svg" alt="SQLite" />
-</p>
-
-### Warsha · one workspace for terminals and AI coding agents
-
-<p>
-  <img src="assets/img/badge-status-private-beta-flat-square.svg" alt="status: private beta" />
-  <img src="assets/img/badge-platform-windows-flat-square.svg" alt="platform: Windows" />
-</p>
-
-> A normal day with AI coding agents is five terminal windows, two chat tabs and no idea which agent is waiting for you. Warsha puts all of it in one native window, per project.
-
-Claude Code, Codex, Gemini, OpenCode and Cursor run **side by side** in up to 10 live panes per workspace, and each pane shows its model and whether it is working, idle or **needs you**. Close the app, update it or let it crash: **every pane comes back as itself and every AI pane resumes its own conversation**. Agents and chat run on the subscription you already pay for, and Warsha never reads or copies a vendor's credentials. A planning canvas lets the AI draw the plan while you watch, through a local MCP server.
-
-One rule outranks every feature: **the terminal comes first**. AI surfaces may not cost terminal correctness, resize integrity, process ownership or idle CPU.
-
-Built as a **Rust core** (ConPTY sessions, Windows job objects for clean process-tree kills, atomic versioned persistence) behind thin Tauri v2 adapters, with a **React + TypeScript** UI and `xterm.js` running outside React. Used every day, installs and updates itself. The source is private.
-
-<p>
-  <img src="assets/img/badge-rust-000000-flat-square.svg" alt="Rust" />
-  <img src="assets/img/badge-tauri-v2-24c8db-flat-square.svg" alt="Tauri" />
-  <img src="assets/img/badge-react-61dafb-flat-square.svg" alt="React" />
-  <img src="assets/img/badge-typescript-3178c6-flat-square.svg" alt="TypeScript" />
-  <img src="assets/img/badge-xterm-js-111111-flat-square.svg" alt="xterm.js" />
-  <img src="assets/img/badge-conpty-0078d6-flat-square.svg" alt="ConPTY" />
-  <img src="assets/img/badge-mcp-7f52ff-flat-square.svg" alt="MCP" />
-</p>
-
-### Folowise Commerce Engine · foloengine v3
-
-> My deepest project. A multi-tenant commerce **engine**, not just a store.
-
-The engine is the shared brain and control plane for a fleet of storefronts. It owns **licensing, billing, capability authority, update policy, and operational visibility**, while each website owns its own runtime commerce data (database-per-tenant isolation, no cross-tenant leakage). It ships a **server-side PHP SDK** plus a scoped browser JS client, Stripe-hosted checkout, and 30+ commerce HTTP endpoints. ADR-driven architecture, deployed through GitHub Actions CI, observed with Sentry, and already powering live production storefronts (FoloPrint among them).
-
-<p>
-  <img src="assets/img/badge-laravel-ff2d20-flat-square.svg" alt="Laravel" />
-  <img src="assets/img/badge-filament-fdae4b-flat-square.svg" alt="Filament" />
-  <img src="assets/img/badge-server-side-php-sdk-777bb4-flat-square.svg" alt="PHP SDK" />
-  <img src="assets/img/badge-multi-tenant-4169e1-flat-square.svg" alt="Multi-tenant" />
-  <img src="assets/img/badge-stripe-checkout-635bff-flat-square.svg" alt="Stripe" />
-  <img src="assets/img/badge-sentry-362d59-flat-square.svg" alt="Sentry" />
-</p>
-
----
-
-## More I've Built
-
-| Project | What it is | Stack |
-| --- | --- | --- |
-| [**EchoFlow**](https://github.com/Mnourkh01/echoflow) ↗ | Offline voice-to-text desktop app, local Whisper, auto-type, EN/AR, live and downloadable | `Rust` `Tauri` `whisper.cpp` `TypeScript` |
-| **Warsha** (private beta) | One Windows workspace for terminals and AI coding agents: Claude Code, Codex and Gemini side by side, every pane and AI conversation survives a restart | `Rust` `Tauri v2` `React` `TypeScript` |
-| [**Karmetta**](https://karmetta.com) ↗ | Restaurant platform on the engine: QR table ordering, bilingual menu, kitchen display split by station, live in production | `Laravel` `Alpine.js` `Tailwind` |
-| [**FoloPrint**](https://foloprint.folowise.com/) ↗ | Print-on-demand storefront running on the engine, live in production | `Laravel` `Filament` `Vite` |
-| [**Inside the Harness**](https://inside-the-harness.pages.dev) ↗ | Free interactive course in English and Arabic on how AI agents really work: 30 levels, hands-on labs, narrated videos | `JavaScript` `HTML` `Cloudflare Pages` |
-| [**Adaptive AI Skill Assessment**](https://github.com/Mnourkh01/dynamic-wizard-questions) | 25-question adaptive test for technical roles: AI agents do the language work, tested code owns every number, EN/AR | `Next.js` `TypeScript` `Claude Agent SDK` `Prisma` |
-| [**FoloPrint Design Studio**](https://github.com/Mnourkh01/FoloPrint-design-studio) | In-browser print design and mockup studio (production print file plus rendered preview per side) | `TypeScript` `React` `Canvas` |
-| **qrfolo** | QR product: REST API, web app, and an analytics pipeline | `NestJS` `Prisma` `PostgreSQL` `Redis` `NATS` |
-| [**Spring Boot API Starter**](https://github.com/Mnourkh01/Starter-Project) | Backend template: JWT auth + refresh-token rotation, layered structure, global error envelope | `Spring Boot` `Kotlin` `Flyway` |
-| [**URL Shortener**](https://github.com/Mnourkh01/url-shortener) | Short links with a Redis-cached redirect hot path and click analytics | `Kotlin` `Spring Boot` `Redis` |
-| [**Java 21 Auth Starter**](https://github.com/Mnourkh01/spring-boot-java-starter) | The auth baseline rebuilt in record-driven Java 21, Docker + CI | `Java 21` `Spring Boot` `Docker` |
-| [**Portfolio**](https://github.com/Mnourkh01/portfolio) | Matrix-themed developer portfolio, Next.js 15 + GSAP, full-page digital-rain canvas | `Next.js` `React` `GSAP` |
-| [**CarVerse**](https://github.com/Mnourkh01/CarVerse-website-project) | Car discovery platform practice build | `Next.js` `React` `Tailwind` |
-| **CMS Core Starter** | Reusable, step-gated CMS backend starter package | `NestJS` `Prisma` `TypeScript` |
-
----
-
-## Tech Stack
-
-**Languages**
-
-![Kotlin](assets/img/badge-kotlin-7f52ff-for-the-badge.svg)
-![Java](assets/img/badge-java-ed8b00-for-the-badge.svg)
-![TypeScript](assets/img/badge-typescript-3178c6-for-the-badge.svg)
-![PHP](assets/img/badge-php-777bb4-for-the-badge.svg)
-![Rust](assets/img/badge-rust-000000-for-the-badge.svg)
-![SQL](assets/img/badge-sql-336791-for-the-badge.svg)
-
-**Backend**
-
-![Spring Boot](assets/img/badge-spring-boot-6db33f-for-the-badge.svg)
-![Spring Security](assets/img/badge-spring-security-6db33f-for-the-badge.svg)
-![Ktor](assets/img/badge-ktor-087cfa-for-the-badge.svg)
-![NestJS](assets/img/badge-nestjs-e0234e-for-the-badge.svg)
-![Laravel](assets/img/badge-laravel-ff2d20-for-the-badge.svg)
-![JWT](assets/img/badge-jwt-000000-for-the-badge.svg)
-
-**Frontend & Desktop**
-
-![Next.js](assets/img/badge-next-js-000000-for-the-badge.svg)
-![React](assets/img/badge-react-61dafb-for-the-badge.svg)
-![Tailwind](assets/img/badge-tailwind-06b6d4-for-the-badge.svg)
-![Tauri](assets/img/badge-tauri-24c8db-for-the-badge.svg)
-
-**Data & Infra**
-
-![PostgreSQL](assets/img/badge-postgresql-4169e1-for-the-badge.svg)
-![Prisma](assets/img/badge-prisma-2d3748-for-the-badge.svg)
-![Redis](assets/img/badge-redis-dc382d-for-the-badge.svg)
-![SQLite](assets/img/badge-sqlite-003b57-for-the-badge.svg)
-![Flyway](assets/img/badge-flyway-cc0200-for-the-badge.svg)
-![Docker](assets/img/badge-docker-2496ed-for-the-badge.svg)
-![GitHub Actions](assets/img/badge-actions-2088ff-for-the-badge.svg)
-
-**Tools**
-
-![Git](assets/img/badge-git-f05032-for-the-badge.svg)
-![IntelliJ IDEA](assets/img/badge-intellij-000000-for-the-badge.svg)
-![Postman](assets/img/badge-postman-ff6c37-for-the-badge.svg)
-![Gradle](assets/img/badge-gradle-02303a-for-the-badge.svg)
-![Sentry](assets/img/badge-sentry-362d59-for-the-badge.svg)
-
----
-
-## GitHub Activity
+Most of my work happens in private company repositories, so the public graph shows only part of it. This picture is drawn from my commit dates, private work included (counts only, no code):
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/main/assets/stats.svg" width="92%" alt="GitHub stats: contributions, commits, pull requests, repos, and most-used languages" />
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Mnourkh01/Mnourkh01/main/assets/contributions.svg" width="92%" alt="Contribution activity heatmap for the last year" />
-</p>
-
----
-
-<p align="center">
-  <img src="assets/img/banner-footer.svg" alt="footer" />
+  <img src="assets/contribution-city.svg" width="100%" alt="Contribution City: one building per day of my last year of commits, taller on busier days, private work included." />
 </p>
